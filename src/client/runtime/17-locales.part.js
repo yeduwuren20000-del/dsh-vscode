@@ -1,0 +1,247 @@
+		//#region lib/types/client/locales.js
+		/** Locales for the file explorer plugin. */
+		const NS = "file-explorer";
+		const zh = {
+			viewLabel: "文件",
+			viewChatLabel: "对话",
+			wsOpenOther: "打开其他目录…",
+			wsWorkspaces: "工作区",
+			wsLoading: "正在读取工作区…",
+			wsPrompt: "输入要打开的目录（绝对路径）",
+			subagentTitle: "子智能体",
+			subagentNew: "新建子智能体",
+			subagentDelete: "删除当前子智能体",
+			subagentDeleteConfirm: "删除这个子智能体及其记忆文件？此操作不可撤销。",
+			subagentRefresh: "重新读取",
+			subagentResize: "拖动调整高度",
+			subagentEmpty: "还没有子智能体。点 ＋ 新建一个，它会把记忆写进这个工作区的 .dsh/subagents/ 里。",
+			subagentPick: "从上方标签里选一个子智能体。",
+			subagentFromMain: "来自主智能体",
+			subagentYou: "我",
+			subagentThinking: "子智能体正在思考…",
+			subagentSend: "发送",
+			subagentSending: "发送中…",
+			subagentPlaceholder: "给子智能体发消息…（Ctrl+Enter 发送，Enter 换行）",
+			subagentNoModel: "跟随会话模型",
+			subagentMemoryHint: "记忆文件：.dsh/subagents/　主智能体可直接读取以了解它的进展",
+			emptyWorkspace: "工作区为空",
+			settingsTitle: "SupaNexus 文件浏览",
+			settingsDescription: "工作区根目录与对话内文件链接打开方式",
+			settingsRoot: "兜底根目录",
+			settingsRootHint: "会话未钉定 cwd 时使用；会话打开文件浏览时会优先钉到会话工作区",
+			settingsOpenLinks: "在编辑器中打开对话内文件链接",
+			settingsOpenLinksHint: "拦截会话消息里的本地路径链接，并在文件编辑器中打开",
+			expand: "展开",
+			collapse: "折叠",
+			expandAll: "全部展开",
+			collapseAll: "全部折叠",
+			readOnly: "当前不可写入设置",
+			newFile: "新建文件",
+			newFolder: "新建文件夹",
+			refresh: "刷新",
+			rename: "重命名",
+			delete: "删除",
+			promptNewFile: "新文件名",
+			promptNewFolder: "新文件夹名",
+			promptRename: "重命名为",
+			confirmDelete: "确定删除「{name}」？",
+			openInFileManager: "在文件管理器中打开",
+			revealPathInFileManager: "打开文件所在目录",
+			tabClose: "关闭",
+			tabCloseRight: "关闭右侧",
+			tabCloseAll: "关闭所有",
+			confirmCloseDirty: "有未保存的更改，确定关闭？",
+			editorEmpty: "从左侧目录树打开文件",
+			editorSave: "保存",
+			editorFormat: "格式化",
+			editorFormatted: "已格式化",
+			editorFormatUnavailable: "该语言没有内置格式化器",
+			editorSource: "源码",
+			editorPreview: "预览",
+			editorSaved: "已保存",
+			editorConflict: "磁盘上已有更新的版本，已阻止保存以免覆盖",
+			editorStaleBanner: "此文件已被磁盘上的更新覆盖（可能来自对话中的修改），当前编辑内容仍保留",
+			errIsBinary: "二进制文件无法在编辑器中打开（如 .pyc、图片、压缩包等）",
+			errTooLarge: "文件过大，编辑器最多支持 8 MiB",
+			errNotFound: "文件不存在（可能已被移动或删除）",
+			errOutOfRoot: "路径越出了工作区根目录，已拒绝访问",
+			errUpstreamBusy: "上游模型限流（HTTP 429），排队中 —— 稍后重试即可",
+			editorReload: "加载磁盘版本",
+			editorForceSave: "强制保存（覆盖磁盘）",
+			editorTextareaMode: "文本框模式",
+			treeAriaLabel: "工作区文件",
+			sessionFolderBadge: "会话",
+			sessionFolderUnnamed: "未命名会话",
+			sessionFolderSelf: "会话文件夹",
+			sessionFolderWorkspace: "工作区",
+			sessionFilesProduced: "产出",
+			sessionFilesTotal: "相关",
+			quickOpenPlaceholder: "输入文件名快速打开（↑↓ 选择，Enter 打开，Esc 关闭）",
+			quickOpenLoading: "正在建立文件索引…",
+			quickOpenNoMatch: "没有匹配的文件",
+			quickOpenCount: "{n} / {total} 个文件",
+			quickOpenError: "无法读取文件索引",
+			editorMinimap: "小地图（缩略图）",
+			editorAppearance: "主题",
+			editorTheme: "底色",
+			editorThemeDark: "深色",
+			editorThemeLight: "浅色",
+			editorThemeHighContrast: "高对比",
+			editorThemeVscode: "VSCode 主题",
+			editorFontSize: "字号",
+			editorFontSmaller: "缩小字号",
+			editorFontLarger: "放大字号",
+			editorCustomColor: "自定义色值",
+			editorCustomColorHint: "支持 #RGB / #RRGGBB / #RRGGBBAA",
+			editorCustomColorInvalid: "色值无效，请使用 HTML 十六进制颜色",
+			editorCustomColorClear: "清除",
+			editorScheme: "方案",
+			editorSchemeSave: "保存当前方案",
+			editorSchemeEmpty: "暂无已保存方案",
+			editorSchemeRemove: "删除方案",
+			editorFilePath: "文件路径"
+		};
+		const en = {
+			viewLabel: "Files",
+			viewChatLabel: "Chat",
+			wsOpenOther: "Open another folder…",
+			wsWorkspaces: "Workspaces",
+			wsLoading: "Reading workspaces…",
+			wsPrompt: "Folder to open (absolute path)",
+			subagentTitle: "Subagent",
+			subagentNew: "New subagent",
+			subagentDelete: "Delete the current subagent",
+			subagentDeleteConfirm: "Delete this subagent and its memory file? This cannot be undone.",
+			subagentRefresh: "Reload",
+			subagentResize: "Drag to resize",
+			subagentEmpty: "No subagent yet. Press ＋ to create one — it keeps its memory in this workspace under .dsh/subagents/.",
+			subagentPick: "Pick a subagent from the tabs above.",
+			subagentFromMain: "From the main agent",
+			subagentYou: "You",
+			subagentThinking: "Subagent is thinking…",
+			subagentSend: "Send",
+			subagentSending: "Sending…",
+			subagentPlaceholder: "Message the subagent… (Ctrl+Enter to send, Enter for a newline)",
+			subagentNoModel: "follows the session model",
+			subagentMemoryHint: "Memory file: .dsh/subagents/ — the main agent reads it directly to follow along",
+			emptyWorkspace: "Empty workspace",
+			settingsTitle: "SupaNexus file explorer",
+			settingsDescription: "Workspace root and conversation file-link behavior",
+			settingsRoot: "Fallback root",
+			settingsRootHint: "Used before a session cwd pin; opening the explorer pins to the session workspace when available",
+			settingsOpenLinks: "Open conversation file links in editor",
+			settingsOpenLinksHint: "Intercept local path links in conversation messages and open them in the file editor",
+			expand: "Expand",
+			collapse: "Collapse",
+			expandAll: "Expand All",
+			collapseAll: "Collapse All",
+			readOnly: "Settings are read-only right now",
+			newFile: "New file",
+			newFolder: "New folder",
+			refresh: "Refresh",
+			rename: "Rename",
+			delete: "Delete",
+			promptNewFile: "New file name",
+			promptNewFolder: "New folder name",
+			promptRename: "Rename to",
+			confirmDelete: "Delete \"{name}\"?",
+			openInFileManager: "Reveal in file manager",
+			revealPathInFileManager: "Reveal in File Manager",
+			tabClose: "Close",
+			tabCloseRight: "Close to the Right",
+			tabCloseAll: "Close All",
+			confirmCloseDirty: "Unsaved changes will be discarded. Close anyway?",
+			editorEmpty: "Open a file from the explorer",
+			editorSave: "Save",
+			editorFormat: "Format",
+			editorFormatted: "Formatted",
+			editorFormatUnavailable: "No built-in formatter for this language",
+			editorSource: "Source",
+			editorPreview: "Preview",
+			editorSaved: "Saved",
+			editorConflict: "A newer revision exists on disk — save blocked to avoid overwriting it",
+			editorStaleBanner: "This file was changed on disk (possibly by the conversation). Your edits are kept.",
+			errIsBinary: "Binary files can't be opened in the editor (.pyc, images, archives, …)",
+			errTooLarge: "File too large — the editor supports up to 8 MiB",
+			errNotFound: "File not found (it may have been moved or deleted)",
+			errOutOfRoot: "Path escapes the workspace root — access denied",
+			errUpstreamBusy: "Upstream model is throttling (HTTP 429), queued — just retry in a moment",
+			editorReload: "Load disk version",
+			editorForceSave: "Force save (overwrite)",
+			editorTextareaMode: "Textarea mode",
+			treeAriaLabel: "Workspace files",
+			sessionFolderBadge: "Session",
+			sessionFolderUnnamed: "Untitled session",
+			sessionFolderSelf: "Session folder",
+			sessionFolderWorkspace: "Workspace",
+			sessionFilesProduced: "Produced",
+			sessionFilesTotal: "Related",
+			quickOpenPlaceholder: "Type a file name to open (↑↓ select, Enter open, Esc close)",
+			quickOpenLoading: "Building the file index…",
+			quickOpenNoMatch: "No matching files",
+			quickOpenCount: "{n} / {total} files",
+			quickOpenError: "Cannot read the file index",
+			editorMinimap: "Minimap",
+			editorAppearance: "Theme",
+			editorTheme: "Background",
+			editorThemeDark: "Dark",
+			editorThemeLight: "Light",
+			editorThemeHighContrast: "High contrast",
+			editorThemeVscode: "VSCode theme",
+			editorFontSize: "Font size",
+			editorFontSmaller: "Decrease font size",
+			editorFontLarger: "Increase font size",
+			editorCustomColor: "Custom color",
+			editorCustomColorHint: "Accepts #RGB / #RRGGBB / #RRGGBBAA",
+			editorCustomColorInvalid: "Invalid color — use an HTML hex value",
+			editorCustomColorClear: "Clear",
+			editorScheme: "Schemes",
+			editorSchemeSave: "Save current scheme",
+			editorSchemeEmpty: "No saved schemes yet",
+			editorSchemeRemove: "Remove scheme",
+			editorFilePath: "File path"
+		};
+		const dictionaries = {
+			zh,
+			en
+		};
+		function explorerT(locale) {
+			const table = locale.startsWith("zh") ? zh : en;
+			return (key, vars) => {
+				let text = table[key];
+				if (vars !== void 0) for (const [name, value] of Object.entries(vars)) text = text.replaceAll(`{${name}}`, value);
+				return text;
+			};
+		}
+		/**
+		 * Map a host RPC failure to localized copy. The host's `message` is English
+		 * engineering prose — stable UX comes from translating the stable `code`.
+		 * Unknown codes fall back to the host message (it may carry useful IO detail).
+		 */
+		const RPC_ERROR_KEYS = {
+			IS_BINARY: "errIsBinary",
+			TOO_LARGE: "errTooLarge",
+			NOT_FOUND: "errNotFound",
+			OUT_OF_ROOT: "errOutOfRoot",
+			CONFLICT: "editorConflict"
+		};
+		/** Longest raw host message worth showing in a one-line error banner. */
+		const ERROR_TEXT_MAX = 240;
+		/**
+		 * Fold a raw host message into something a banner can hold.
+		 *
+		 * Model-layer failures arrive as the provider's own JSON, sometimes several
+		 * hundred characters of nested escapes. A queued/throttled upstream is by far
+		 * the most common of those and is worth naming plainly; anything else long
+		 * gets clipped so the banner stays readable instead of wrapping the panel.
+		 */
+		function summarizeError(message, t) {
+			const text = typeof message === "string" ? message : String(message);
+			if (typeof t === "function" && /\b429\b/.test(text) && /throttl|rate.?limit|soft_rate|isQueued/i.test(text)) return t("errUpstreamBusy");
+			return text.length <= ERROR_TEXT_MAX ? text : `${text.slice(0, ERROR_TEXT_MAX)}…`;
+		}
+		function describeRpcError(error, t) {
+			const key = error && RPC_ERROR_KEYS[error.code];
+			return key ? t(key) : summarizeError((error && error.message) || String(error), t);
+		}
+		//#endregion

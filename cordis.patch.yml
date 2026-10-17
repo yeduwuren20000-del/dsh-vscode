@@ -1,0 +1,14 @@
+# dsh-vscode bundle patch.
+#
+# Host: ExplorerFsService (Typert `explorerFs` RPC).
+# Client: discovered via `dsh.client` + exports["./client"].
+- insert:
+    - id: dsh-vscode
+      name: 'dsh-vscode'
+      config:
+        # Root of the file-explorer tree. Pinned to the session workspace
+        # instead of `!!js process.cwd()`, which under the desktop host
+        # resolves to the app install directory (app.asar/dsh) and would
+        # expose the application tree instead of user files.
+        root: 'D:/30651/DeepSeekHarness/Workspaces'
+        openLinksInEditor: false

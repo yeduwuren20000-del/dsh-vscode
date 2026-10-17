@@ -1,0 +1,9 @@
+# dependencies
+node_modules/
+.pnpm-store/
+
+# build backups / scratch outputs
+*.bak
+*.bak-*
+*.tmp
+*.log
